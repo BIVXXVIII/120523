@@ -1,0 +1,15 @@
+.layaout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.header {
+    margin: 0 auto;
+    width: 968px;
+}
+
+.main {
+    flex-grow: 1;
+    background: #FAFBFF;
+    padding: 41px 95px 30px 71px;
+}

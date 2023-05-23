@@ -1,0 +1,135 @@
+.side {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 39px 28px 76px 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5)
+}
+
+.side__wrapper {
+    position: relative;
+    // display: grid;
+    // grid-template-columns: 0fr;
+    // transition: all .2 linear;
+    // overflow: hidden;
+
+    // &:hover {
+    //     grid-template-columns: 1fr;
+    // }
+}
+
+.side__menuLogo {
+    transition: all ease .8s;
+    display: none;
+
+    &:hover {
+        transform: rotate(120deg);
+    }
+}
+
+.side__logo {
+    display: flex;
+    align-items: end;
+    margin-bottom: 66px;
+}
+
+.side__logo__version {
+    margin-left: 4px;
+    position: relative;
+    bottom: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+    color: #838383;
+
+}
+
+// locale mixin
+@mixin sidebarNavItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 8px 11px 11px;
+    border-radius: 8px;
+    width: 250px;
+    transition: all 200ms linear;
+    cursor: pointer;
+    margin-bottom: 18px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &>div {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+}
+
+.side__navitem {
+    @include sidebarNavItem();
+    color: #9197B3;
+
+    &:hover {
+        color: #73788f;
+    }
+}
+
+
+.side__navitem--active {
+    @include sidebarNavItem();
+    background: #5932EA;
+
+    color: #fff;
+
+}
+
+.side__user {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.side__user__avatar {
+    width: 42px;
+    height: 42px;
+}
+
+.side__user__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.side__user__position {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+@media (max-width:700px) {
+    .side__menuLogo {
+        display: block;
+    }
+
+    .main {
+        flex-grow: 0;
+    }
+
+    .side {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+}
