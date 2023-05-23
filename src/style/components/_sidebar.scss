@@ -10,14 +10,6 @@
 
 .side__wrapper {
     position: relative;
-    // display: grid;
-    // grid-template-columns: 0fr;
-    // transition: all .2 linear;
-    // overflow: hidden;
-
-    // &:hover {
-    //     grid-template-columns: 1fr;
-    // }
 }
 
 .side__menuLogo {
@@ -114,22 +106,4 @@
     line-height: 18px;
     letter-spacing: 0.01em;
     color: #757575;
-}
-
-@media (max-width:700px) {
-    .side__menuLogo {
-        display: block;
-    }
-
-    .main {
-        flex-grow: 0;
-    }
-
-    .side {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-    }
 }
